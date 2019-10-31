@@ -22,3 +22,49 @@ Technical Details
     -The maximum size of a range will be 100 integers
     -The starting number of a range will be: 0 < n < 100
  */
+
+
+ function mysterRange(inputString,n){
+// we split the string to n part the result will be an array of strings 
+// we iterate the array to sort the min and the max integer of each elemnt 
+// push the min and the max to an array having the length 2( two element the min and the max)
+// return this array 
+
+ 	var resultArr = [];
+ 	var max = 0;
+ 	var min = 0;
+ 	var rg = [];
+// get the n numbers of the string 
+
+ 	var arr = inputString.split('');
+    
+// get min  and max
+ 	for (var i = 0;  i< arr.length ; i++) {
+ 		for (var j = 0; j < arr[i].length; j++) {
+ 			rg = arr[i].split('');
+ 			if(max < rg[j]){
+ 				max = rg[j];
+ 			}
+ 			if(min > rg[j]){
+ 				min = rg[j];
+ 			}
+
+ 			}
+ 		}
+ 		
+ 	} 
+
+ 	//push to resultArr
+ 	resultArr.push(min);
+ 	resultArr.push(max);
+ 	return resultArr;
+}
+
+
+
+ /*function dividing(str){
+ 	for (var i = 0; i < str.length; i++) {
+ 	 Input " give a number"; 
+ 	}
+ }
+ */
