@@ -17,6 +17,7 @@
             D          500
             M          1,000 
     
+
     2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
         Examples:
 
@@ -31,3 +32,59 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+function solution(str){
+	// speliting the string of roman numbers then, and than compare with the value of decimal and return the decimal number  
+	var res = 0;
+	// strSp an array that contain the string splited 
+	var strSp = str.split('');
+	for (var i = 0; i < strSp.length; i++) {
+		res = res +convert(strSp[i]);
+	}
+	return res ;
+
+}
+
+function convert(element){
+	var somme = 0;
+	if(element === 'I'){
+		somme = 1 ;
+	}
+	else if(element === 'V'){
+		somme = 5 ;
+	}
+	else
+		 if (element === 'X'){
+		 	somme = 10 ;
+		 }
+		if(element === 'L'){
+		somme = 50 ;
+	}
+	else if(element === 'C'){
+		somme = 100 ;
+	}
+	else
+		 if (element === 'D'){
+		 	somme = 500;
+		 }
+		 else
+		 	if (element === 'M') {
+		 		somme = 1000 ;
+		 	}
+
+ 	return somme ;
+}
+
+function filter_list(arr){
+	var res = [];
+	for (var i = 0; i < arr.length; i++) {
+		if(isnum(arr[i]))
+			res.push(arr[i]);
+	}
+	return res ;
+}
+function isnum(element){
+	if(element === 0 || element === 1 || element === 2 || element === 3 || element === 4 || element === 5 || element === 6 || element === 7 || element === 8 || element === 9  ){
+		return true ;
+	}
+}
