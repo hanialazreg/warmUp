@@ -4,3 +4,24 @@
 //
 //
 // Note : you can`t use any built-in functions .
+function reverseStr(str){
+	var resStr = '';
+	var fresStr = '';
+	var sp = 0;
+	for (var i = 0 ; i < str.length; i++) {
+		if(str[i] === ' '){
+			//sp = i;
+			//for (var j = 0; j < sp; j++) {
+				resStr = ' ' + resStr ;
+				fresStr = resStr ;
+			//}
+			
+			
+		}
+		resStr = str[i] + ' ' +fresStr ;
+
+		
+	}
+	return resStr ;
+
+}
