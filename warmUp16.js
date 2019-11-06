@@ -26,21 +26,22 @@ function nbBallon(str) {
 	for (var i = 0; i < arr.length; i++) {
 		for (var j = 0; i < bArr.length; j++) {
 			if(arr[i] === bArr[j]){
-				count = count +1;
-				res[j] = count;
+				
+				res[j] = res[j]+ 1;
 			}
-			count = 0;
+			
 		}
 		
 	}
 	
-	
-	for (var i = 0; i < res.length; i++) {
+	console.log(res);
+	/*for (var i = 0; i < res.length; i++) {
 		if(res[i] < min){
 			min = res[i];
 		}
 	}
+
 	return min ;
-	
+	*/
 	
 }
