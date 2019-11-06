@@ -16,3 +16,31 @@
 // Constraints:
 // 1 <= text.length <= 10^4
 // text consists of lower case English letters only.
+function nbBallon(str) {
+
+	var bArr= ['b', 'a', 'l', 'l', 'o', 'o', 'n'];
+	var res=[0, 0, 0, 0, 0, 0, 0];
+	var arr = str.split('');
+	var min = 0;
+	var count = 0;
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = 0; i < bArr.length; j++) {
+			if(arr[i] === bArr[j]){
+				count = count +1;
+				res[j] = count;
+			}
+			count = 0;
+		}
+		
+	}
+	
+	
+	for (var i = 0; i < res.length; i++) {
+		if(res[i] < min){
+			min = res[i];
+		}
+	}
+	return min ;
+	
+	
+}

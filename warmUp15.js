@@ -12,13 +12,13 @@ function reverseStr(str){
 		if(str[i] === ' '){
 			//sp = i;
 			//for (var j = 0; j < sp; j++) {
-				resStr = ' ' + resStr ;
-				fresStr = resStr ;
+				resStr = str[i] +' ' + resStr ;
+				
 			//}
 			
 			
 		}
-		resStr = str[i] + ' ' +fresStr ;
+		resStr = resStr + str[i] ;
 
 		
 	}
