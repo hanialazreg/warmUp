@@ -30,3 +30,30 @@
 // var calculateTime = function(keyboard, word) {
     
 // };
+function calculateTime(keyboard, word){
+	var keyboardArr = keyboard.split('');
+	var wordArr = word.split('');
+	var arrLast = [];
+	var move = 0;
+	var cltime = 0;
+	var movelength = 0;
+	for (var i = 0; i < wordArr.length; i++) {
+		move = place(keyboardArr, wordArr[i]);
+		arrLast.push(move);
+		movelength = Math.abs(i - arrLast[(arrLast.length) - 1]);
+		cltime = cltime + movelength ;
+
+	}
+	return cltime;
+}
+function place(arr, char){
+
+	var indice = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i] === char){
+			indice = i ;
+		}
+		
+	}
+	return indice;
+}
