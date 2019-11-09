@@ -10,3 +10,34 @@
 
 // input   =  "aaaaaaaaaaaa"
 // result  =  "123456789101112"
+
+function nbOccur(str){
+	
+	var charArr = str.split();
+	var occArr = [];
+	var resArr= [];
+	var strocc = "";
+
+	for (var i = 0; i < charArr.length - 1; i++) {
+		for (var j = 1; i < charArr.length; i++) {
+			var occ = exist(charArr, charArr[j]);
+			if(occ === 1){
+				strocc = strocc + "1";
+			}
+			else
+				strocc = strocc + occ ;
+		}
+		
+	 } 
+ 	return strocc ;
+}
+function exist(arr,c){
+	var nbseen = 0;
+ 	for (var i = 0; i < arr.length; i++) {
+ 		if (arr[i] === c) {
+ 			nbseen ++ ;
+
+ 		}
+ 	}
+ 	return nbseen;
+}
