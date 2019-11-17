@@ -4,3 +4,29 @@
 // 4-calculate your age in seconds.
 
 // your code is here
+//1
+var firstName = "hania";
+var lastName = "lazreg";
+var name = firstName + lastName;
+//2
+function isMultiple(x,y){
+	if (x % y === 0) {
+		return "is a multiple";
+
+	}
+	return "is not multiple";
+
+}
+// execute this function using x = 13 and y = 3 
+// 3 
+function avrageAge(array){
+	var age = 0 ;
+	for (var i = 0; i < array.length; i++) {
+		age = age + array[i];
+	}
+	return age/ array.length;
+}
+4//
+function ageSecond(n){
+	return n*30*60*24*30*12;
+}
